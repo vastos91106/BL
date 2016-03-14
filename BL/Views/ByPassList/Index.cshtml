@@ -1,0 +1,13 @@
+﻿@model System.Collections.Generic.IEnumerable<Core.Entities.ByPassList>
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>By pass list</h2>
+
+@foreach (var bypassList in Model)
+{
+    @Html.LabelFor(x=>bypassList.Name)
+  @Html.ActionLink("Details","Details","ByPassList",new {id=bypassList.Id})
+}
